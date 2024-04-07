@@ -1,4 +1,3 @@
-from calendar import weekday
 from datetime import datetime, time, timedelta
 from email import message
 from functools import wraps

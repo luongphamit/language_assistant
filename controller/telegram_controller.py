@@ -21,6 +21,10 @@ import re
 from dateutil.relativedelta import relativedelta
 from langdetect import detect
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()
+AZURE_KEY = os.getenv("AZURE_KEY")
 
 
 class TelegramController:
@@ -67,7 +71,7 @@ class TelegramController:
             f"https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&from={from_lang}&to={to_lang}",
             headers={
                 "Content-Type": "application/json; charset=UTF-8",
-                "Ocp-Apim-Subscription-Key": "35874b044687447aaa3b7864b975157d",
+                "Ocp-Apim-Subscription-Key": f"{AZURE_KEY}",
                 "Ocp-Apim-Subscription-Region": "koreacentral"
             },
             json=[{"Text": msg}]
