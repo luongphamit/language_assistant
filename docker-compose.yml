@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  maxout_assistant_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
+    volumes:
+      - .:/usr/src/app
+    command: [ "python", "run.py" ]

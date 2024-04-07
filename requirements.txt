@@ -1,0 +1,8 @@
+python-dotenv==0.19.2
+python-engineio==3.14.2
+python-telegram-bot==13.10
+requests==2.27.1
+mysql-connector-python==8.0.27
+python-dateutil
+pytz
+langdetect
